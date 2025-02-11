@@ -1122,7 +1122,7 @@ a:hover {
 
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-![Uploading image.png…]()
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/b722c6f3-d16b-4ba3-af8a-d25d0ab4a660" />
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
 ## การทดลองที่ 6: Layout และการจัดวางอิลิเมนต์
@@ -1264,12 +1264,237 @@ a:hover {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta charset="UTF-8">
+    <title>หน้าหลัก</title>
+</head>
+<body>
+    <nav>
+        <img src="images/logo.jpg" 
+     alt="โลโก้บริษัท"
+     width="50"
+     height="50">
+        <!-- ลิงก์ภายใน - ไปยังหน้าในเว็บไซต์เดียวกัน -->
+        <a href="index.html">หน้าหลัก</a>
+        <a href="pages/about.html">เกี่ยวกับเรา</a>
+        <a href="pages/contact.html">ติดต่อเรา</a>
+        
+        <!-- ลิงก์ภายนอก - เปิดในแท็บใหม่ -->
+        <a href="https://www.google.com" target="_blank">
+            ไปยัง Google
+        </a>
+    </nav>
+
+
+
+
+
+    <!-- สร้างจุดเชื่อมโยง -->
+<section id="top">
+    <h1>ร้านสตาร์บูด</h1>
+</section>
+
+<section id="products">
+    <h2>สินค้าของเรา</h2>
+</section>
+
+
+<a href="images/products/product4.jpg">
+    <img src="images/products/product4.jpg" 
+         alt="คลิกเพื่อดูรูปขนาดใหญ่"
+         width="200">
+         <figcaption>
+            น้ำส้มปั้่น
+        </figcaption><br>
+<a href="images/products/product3.jpg">
+    <img src="images/products/product3.jpg" 
+         alt="คลิกเพื่อดูรูปขนาดใหญ่"
+         width="200">
+         <figcaption>
+            ไมโล
+        </figcaption><br>
+<a href="images/products/product5.jpg">
+    <img src="images/products/product5.jpg" 
+         alt="คลิกเพื่อดูรูปขนาดใหญ่"
+         width="200">
+         <figcaption>
+            น้ำมะนาว
+        </figcaption><br>
+<a href="images/products/product2.jpg">
+    <img src="images/products/product2.jpg" 
+         alt="คลิกเพื่อดูรูปขนาดใหญ่"
+         width="200">
+         <figcaption>
+            ไอติม
+        </figcaption><br>
+</a>
+<a href="images/products/product1.jpg">
+    <img src="images/products/product1.jpg" 
+         alt="คลิกเพื่อดูรูปขนาดใหญ่"
+         width="200">
+         <figcaption>
+            กาแฟดำ
+        </figcaption><br>
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ลิงก์ไปยังจุดเชื่อมโยง -->
+<br><a href="#top">กลับด้านบน</a>
+<a href="#products">ไปยังสินค้า</a>
+
+
+<!-- ลิงก์อีเมล -->
+<a href="67030302@kmitl.ac.th">ส่งอีเมลหาเรา</a>
+
+<!-- ลิงก์โทรศัพท์ -->
+<a href="tel:+66812345678">โทร 0988958597</a>
+
+<!-- ลิงก์ดาวน์โหลด -->
+<a href="files/document.pdf" download>
+    ดาวน์โหลดเอกสาร
+</a>
+
+
+
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+/* รีเซ็ตค่าพื้นฐานของ CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.8;
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+}
+
+nav {
+    background: #444;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ff5733;
+}
+
+h1 {
+    color: #222;
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+section {
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+}
+
+/* ปรับแต่งการแสดงผลสินค้าแบบแนวนอน */
+.product-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    align-items: center;
+}
+
+.product-container a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.product-container img {
+    border-radius: 10px;
+    transition: transform 0.3s;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-container img:hover {
+    transform: scale(1.1);
+}
+
+figcaption {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+}
+
+/* ปรับแต่งลิงก์ด้านล่าง */
+a {
+    display: inline-block;
+    margin: 12px;
+    color: #0088cc;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff4500;
+}
+
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![Uploading image.png…]()
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
