@@ -520,7 +520,7 @@ background-size: cover;
 </html>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
-![Uploading image.png…]()
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/55ce6cfc-40cc-4b0a-bc1b-846d3a3ddcf7" />
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -616,12 +616,202 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta charset="UTF-8">
+    <title>หน้าหลัก</title>
+</head>
+<body>
+    <nav>
+        <!-- ลิงก์ภายใน - ไปยังหน้าในเว็บไซต์เดียวกัน -->
+        <a href="index.html">หน้าหลัก</a>
+        <a href="pages/about.html">เกี่ยวกับเรา</a>
+        <a href="pages/contact.html">ติดต่อเรา</a>
+        
+        <!-- ลิงก์ภายนอก - เปิดในแท็บใหม่ -->
+        <a href="https://www.google.com" target="_blank">
+            ไปยัง Google
+        </a>
+    </nav>
+
+<!-- รูปภาพในโฟลเดอร์ images -->
+<img src="images/logo.jpg" 
+     alt="โลโก้บริษัท"
+     width="50">
+
+
+
+
+    <!-- สร้างจุดเชื่อมโยง -->
+<section id="top">
+    <h1>ร้านสตาร์บูด</h1>
+</section>
+
+<section id="products">
+    <h2>สินค้าของเรา</h2>
+</section>
+
+
+<a href="images/products/product4.jpg">
+    <img src="images/products/product4.jpg" 
+         alt="คลิกเพื่อดูรูปขนาดใหญ่"
+         width="200">
+         <figcaption>
+            น้ำส้มปั้่น
+        </figcaption><br>
+<a href="images/products/product3.jpg">
+    <img src="images/products/product3.jpg" 
+         alt="คลิกเพื่อดูรูปขนาดใหญ่"
+         width="200">
+         <figcaption>
+            ไมโล
+        </figcaption><br>
+<a href="images/products/product2.jpg">
+    <img src="images/products/product2.jpg" 
+         alt="คลิกเพื่อดูรูปขนาดใหญ่"
+         width="200">
+         <figcaption>
+            ไอติม
+        </figcaption><br>
+</a>
+<a href="images/products/product1.jpg">
+    <img src="images/products/product1.jpg" 
+         alt="คลิกเพื่อดูรูปขนาดใหญ่"
+         width="200">
+         <figcaption>
+            กาแฟดำ
+        </figcaption><br>
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ลิงก์ไปยังจุดเชื่อมโยง -->
+<a href="#top">กลับด้านบน</a>
+<a href="#products">ไปยังสินค้า</a>
+
+
+<!-- ลิงก์อีเมล -->
+<a href="67030302@kmitl.ac.th">ส่งอีเมลหาเรา</a>
+
+<!-- ลิงก์โทรศัพท์ -->
+<a href="tel:+66812345678">โทร 0988958597</a>
+
+<!-- ลิงก์ดาวน์โหลด -->
+<a href="files/document.pdf" download>
+    ดาวน์โหลดเอกสาร
+</a>
+
+
+
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+/* รีเซ็ตค่าพื้นฐานของ CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #e0e0e0;
+    color: #222;
+    line-height: 1.8;
+    text-align: center;
+    padding: 30px;
+    font-size: 18px;
+}
+
+nav {
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+nav a {
+    color: #f8f9fa;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+section {
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+}
+
+img {
+    border-radius: 12px;
+    transition: transform 0.3s;
+    max-width: 100%;
+    height: auto;
+}
+
+img:hover {
+    transform: scale(1.08);
+}
+
+figcaption {
+    font-weight: bold;
+    margin-top: 8px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* ปรับแต่งลิงก์ด้านล่าง */
+a {
+    display: block;
+    margin: 12px 0;
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff6600;
+}
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![Uploading image.png…]()
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
